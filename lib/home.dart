@@ -83,153 +83,158 @@ class Apppage extends State<home> {
         ),
         centerTitle: true,
       ),
-      body: Container(
+      body: Column(
+        children: [
+          RaisedButton.icon(onPressed: (){}, icon: Icon(Icons.access_alarm), label: Text("Good Morning")),
+          Container(
 
-        margin: const EdgeInsets.all(15.0),
+            margin: const EdgeInsets.all(15.0),
 
-        child: ListView(
+            child: ListView(
 
-          children: <Widget>[
+              children: <Widget>[
 
-            new Container(
-              child:  new Image.asset('$_image'),
-              height: 150,
-              width: 200,
-            ),
-            new Container(
+                new Container(
+                  child:  new Image.asset('$_image'),
+                  height: 150,
+                  width: 200,
+                ),
+                new Container(
 
-              margin: const EdgeInsets.all(15.0),
-              alignment: Alignment.center,
-              child: new Column(
-                children: <Widget>[
-                  new TextField(
-                    controller: _weightController,
-                    keyboardType: TextInputType.number,
-                    decoration: new InputDecoration(
-                      labelText: 'Your Weight On Earth',
-                      hintText: 'IN POUNDS',
-                      icon: new Icon(Icons.person_outline)
-                    ),
-                  ),
-                  new Padding(padding: new EdgeInsets.all(13.8)),
-                  new Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-
+                  margin: const EdgeInsets.all(15.0),
+                  alignment: Alignment.center,
+                  child: new Column(
                     children: <Widget>[
+                      new TextField(
+                        controller: _weightController,
+                        keyboardType: TextInputType.number,
+                        decoration: new InputDecoration(
+                          labelText: 'Your Weight On Earth',
+                          hintText: 'IN POUNDS',
+                          icon: new Icon(Icons.person_outline)
+                        ),
+                      ),
+                      new Padding(padding: new EdgeInsets.all(13.8)),
+                      new Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
 
-                      new Radio<int>(
+                        children: <Widget>[
 
-                        activeColor: Colors.orangeAccent,
-                          value: 0, groupValue: radiovalue, onChanged: handleRadioValueChanged),
-                      new Text("Pluto      ", style: new TextStyle(
-                        color: Colors.black,
-                        fontWeight: FontWeight.w600
-                      ),),
+                          new Radio<int>(
 
-                      new Radio<int>(
-                        activeColor: Colors.orangeAccent,
-                          value: 1, groupValue: radiovalue, onChanged: handleRadioValueChanged),
-                      new Text("Mars       ", style: new TextStyle(
-                          color: Colors.black,
-                          fontWeight: FontWeight.w600
-                      ),),
+                            activeColor: Colors.orangeAccent,
+                              value: 0, groupValue: radiovalue, onChanged: handleRadioValueChanged),
+                          new Text("Pluto      ", style: new TextStyle(
+                            color: Colors.black,
+                            fontWeight: FontWeight.w600
+                          ),),
 
-                      new Radio<int>(
+                          new Radio<int>(
+                            activeColor: Colors.orangeAccent,
+                              value: 1, groupValue: radiovalue, onChanged: handleRadioValueChanged),
+                          new Text("Mars       ", style: new TextStyle(
+                              color: Colors.black,
+                              fontWeight: FontWeight.w600
+                          ),),
 
-                        activeColor: Colors.orangeAccent,
-                          value: 2, groupValue: radiovalue, onChanged: handleRadioValueChanged),
-                      new Text("Venus", style: new TextStyle(
-                          color: Colors.black,
-                          fontWeight: FontWeight.w600
-                      ),),
+                          new Radio<int>(
 
-                    ],
-                  ),
-                  new Padding(padding: new EdgeInsets.all(15.8)),
-                  new Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
+                            activeColor: Colors.orangeAccent,
+                              value: 2, groupValue: radiovalue, onChanged: handleRadioValueChanged),
+                          new Text("Venus", style: new TextStyle(
+                              color: Colors.black,
+                              fontWeight: FontWeight.w600
+                          ),),
 
-                    children: <Widget>[
+                        ],
+                      ),
+                      new Padding(padding: new EdgeInsets.all(15.8)),
+                      new Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
 
-                      new Radio<int>(
+                        children: <Widget>[
 
-                          activeColor: Colors.orangeAccent,
-                          value: 3, groupValue: radiovalue, onChanged: handleRadioValueChanged),
-                      new Text("Saturn      ", style: new TextStyle(
-                          color: Colors.black,
-                          fontWeight: FontWeight.w600
-                      ),),
+                          new Radio<int>(
 
-                      new Radio<int>(
-                          activeColor: Colors.orangeAccent,
-                          value: 4, groupValue: radiovalue, onChanged: handleRadioValueChanged),
-                      new Text("Jupiter    ", style: new TextStyle(
-                          color: Colors.black,
-                          fontWeight: FontWeight.w600
-                      ),),
+                              activeColor: Colors.orangeAccent,
+                              value: 3, groupValue: radiovalue, onChanged: handleRadioValueChanged),
+                          new Text("Saturn      ", style: new TextStyle(
+                              color: Colors.black,
+                              fontWeight: FontWeight.w600
+                          ),),
 
-                      new Radio<int>(
+                          new Radio<int>(
+                              activeColor: Colors.orangeAccent,
+                              value: 4, groupValue: radiovalue, onChanged: handleRadioValueChanged),
+                          new Text("Jupiter    ", style: new TextStyle(
+                              color: Colors.black,
+                              fontWeight: FontWeight.w600
+                          ),),
 
-                          activeColor: Colors.orangeAccent,
-                          value: 5, groupValue: radiovalue, onChanged: handleRadioValueChanged),
-                      new Text("Mercury", style: new TextStyle(
-                          color: Colors.black,
-                          fontWeight: FontWeight.w600
-                      ),),
+                          new Radio<int>(
 
-                    ],
-                  ),
-                  new Padding(padding: new EdgeInsets.all(15.8)),
-                  new Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
+                              activeColor: Colors.orangeAccent,
+                              value: 5, groupValue: radiovalue, onChanged: handleRadioValueChanged),
+                          new Text("Mercury", style: new TextStyle(
+                              color: Colors.black,
+                              fontWeight: FontWeight.w600
+                          ),),
 
-                    children: <Widget>[
+                        ],
+                      ),
+                      new Padding(padding: new EdgeInsets.all(15.8)),
+                      new Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
 
-                      new Radio<int>(
+                        children: <Widget>[
 
-                          activeColor: Colors.orangeAccent,
-                          value: 6, groupValue: radiovalue, onChanged: handleRadioValueChanged),
-                      new Text("Uranus", style: new TextStyle(
-                          color: Colors.black,
-                          fontWeight: FontWeight.w600
-                      ),),
+                          new Radio<int>(
 
-                      new Radio<int>(
-                          activeColor: Colors.orangeAccent,
-                          value: 7, groupValue: radiovalue, onChanged: handleRadioValueChanged),
-                      new Text("Neptune", style: new TextStyle(
-                          color: Colors.black,
-                          fontWeight: FontWeight.w600
-                      ),),
-                    ],
-                  ),
-                  new Padding(padding: new EdgeInsets.all(10.8)),
-                   new Container(
-                     decoration: const BoxDecoration(
-                       shape: BoxShape.rectangle,
-                       border: Border(
-                         top: BorderSide(width: 5.0, color: Colors.orangeAccent),
-                         left: BorderSide(width: 2.0, color: Colors.orangeAccent),
-                         right: BorderSide(width: 2.0, color: Colors.orangeAccent),
-                         bottom: BorderSide(width: 5.0, color: Colors.orangeAccent),
+                              activeColor: Colors.orangeAccent,
+                              value: 6, groupValue: radiovalue, onChanged: handleRadioValueChanged),
+                          new Text("Uranus", style: new TextStyle(
+                              color: Colors.black,
+                              fontWeight: FontWeight.w600
+                          ),),
 
+                          new Radio<int>(
+                              activeColor: Colors.orangeAccent,
+                              value: 7, groupValue: radiovalue, onChanged: handleRadioValueChanged),
+                          new Text("Neptune", style: new TextStyle(
+                              color: Colors.black,
+                              fontWeight: FontWeight.w600
+                          ),),
+                        ],
+                      ),
+                      new Padding(padding: new EdgeInsets.all(10.8)),
+                       new Container(
+                         decoration: const BoxDecoration(
+                           shape: BoxShape.rectangle,
+                           border: Border(
+                             top: BorderSide(width: 5.0, color: Colors.orangeAccent),
+                             left: BorderSide(width: 2.0, color: Colors.orangeAccent),
+                             right: BorderSide(width: 2.0, color: Colors.orangeAccent),
+                             bottom: BorderSide(width: 5.0, color: Colors.orangeAccent),
+
+                           )
+
+                         ),
+                         child: new Text(
+                           _weightController.text.isEmpty ? " Please Enter Your Weight ": _text + "lbs ",
+                           style: new TextStyle(
+                               color: Colors.black,
+                               fontWeight: FontWeight.bold,
+                               fontSize: 20
+                           ),)
                        )
+                    ],
+                  ),
+                )
+              ],
 
-                     ),
-                     child: new Text(
-                       _weightController.text.isEmpty ? " Please Enter Your Weight ": _text + "lbs ",
-                       style: new TextStyle(
-                           color: Colors.black,
-                           fontWeight: FontWeight.bold,
-                           fontSize: 20
-                       ),)
-                   )
-                ],
-              ),
-            )
-          ],
-
-        ),
+            ),
+          ),
+        ],
       ),
     );
   }
